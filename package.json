@@ -1,0 +1,38 @@
+{
+  "name": "configProyect",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon dist/index.js",
+    "lint": "eslint --ignore-path .gitignore . --ext .js,.ts",
+    "lint:fix": "npm run lint -- --fix",
+    "lintdocument": "eslint src/**/*.ts",
+    "format": "eslint ./**/*.ts --fix",
+    "watch": "npx tsc --watch --target ES2018",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^18.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "eslint": "^8.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "lint-staged": "^13.0.3",
+    "nodemon": "^2.0.19",
+    "typescript": "^4.7.4",
+    "husky": "^8.0.0"
+  },
+  "lint-staged": {
+    "*": "npm run lint"
+  }
+}
